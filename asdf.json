@@ -12,9 +12,16 @@
                     "sourcePort": "0_out",
                     "targetNode": "2",
                     "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
                 }
             ],
-            "hash": "346c1301c5029e0f59f5662556f569096e8033a2",
+            "hash": "7932a279a1d2e710e693f85cc1d19023f22d1072",
             "nodes": {
                 "0": {
                     "data": {
@@ -30,7 +37,7 @@
                     "type": "start",
                     "warnings": {},
                     "x": 1020,
-                    "y": 419.9999999999998
+                    "y": 419.99999999999966
                 },
                 "1": {
                     "data": {
@@ -66,6 +73,25 @@
                     "warnings": {},
                     "x": 1000,
                     "y": 567.9999999999998
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 2,
+                        "functionName": "code_2",
+                        "id": "3",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "code",
+                    "warnings": {},
+                    "x": 1000,
+                    "y": 715.9999999999998
                 }
             },
             "notes": ""
@@ -76,9 +102,9 @@
         "playbook_type": "automation",
         "python_version": "3.13",
         "schema": "5.0.22",
-        "version": "7.0.0.170"
+        "version": "7.0.1.30"
     },
-    "create_time": "2025-08-20T20:19:57.608819+00:00",
+    "create_time": "2025-08-20T21:41:54.040206+00:00",
     "draft_mode": false,
     "labels": [
         "*"
