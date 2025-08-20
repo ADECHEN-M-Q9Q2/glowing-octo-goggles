@@ -4,70 +4,11 @@
     "category": "Uncategorized",
     "coa": {
         "data": {
+            "customCode": "\"\"\"\n\n\"\"\"\n\n\nimport phantom.rules as phantom\nimport json\nfrom datetime import datetime, timedelta\n\n\n@phantom.playbook_block()\ndef on_start(container):\n    phantom.debug('on_start() called')\n\n    # call 'code_1' block\n    code_1(container=container)\n\n    return\n\n@phantom.playbook_block()\ndef code_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, loop_state_json=None, **kwargs):\n    phantom.debug(\"code_1() called\")\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    print()\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_block_result(key=\"code_1_called\", value=\"True\")\n\n    return\n\n\n@phantom.playbook_block()\ndef on_finish(container, summary):\n    phantom.debug(\"on_finish() called\")\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
             "description": "",
-            "edges": [
-                {
-                    "id": "port_0_to_port_2",
-                    "sourceNode": "0",
-                    "sourcePort": "0_out",
-                    "targetNode": "2",
-                    "targetPort": "2_in"
-                }
-            ],
-            "hash": "346c1301c5029e0f59f5662556f569096e8033a2",
-            "nodes": {
-                "0": {
-                    "data": {
-                        "advanced": {
-                            "join": []
-                        },
-                        "functionName": "on_start",
-                        "id": "0",
-                        "type": "start"
-                    },
-                    "errors": {},
-                    "id": "0",
-                    "type": "start",
-                    "warnings": {},
-                    "x": 1020,
-                    "y": 419.9999999999998
-                },
-                "1": {
-                    "data": {
-                        "advanced": {
-                            "join": []
-                        },
-                        "functionName": "on_finish",
-                        "id": "1",
-                        "type": "end"
-                    },
-                    "errors": {},
-                    "id": "1",
-                    "type": "end",
-                    "warnings": {},
-                    "x": 1000,
-                    "y": 1000
-                },
-                "2": {
-                    "data": {
-                        "advanced": {
-                            "join": []
-                        },
-                        "functionId": 1,
-                        "functionName": "code_1",
-                        "id": "2",
-                        "inputParameters": [],
-                        "outputVariables": [],
-                        "type": "code"
-                    },
-                    "errors": {},
-                    "id": "2",
-                    "type": "code",
-                    "warnings": {},
-                    "x": 1000,
-                    "y": 567.9999999999998
-                }
-            },
+            "edges": [],
+            "hash": "27152c23f8c1780242da10bec4dcf5c861773fcd",
+            "nodes": {},
             "notes": ""
         },
         "input_spec": null,
@@ -76,9 +17,9 @@
         "playbook_type": "automation",
         "python_version": "3.13",
         "schema": "5.0.22",
-        "version": "7.0.1.30"
+        "version": "7.1.0.13"
     },
-    "create_time": "2025-08-20T20:42:02.910692+00:00",
+    "create_time": "2025-08-20T22:46:03.988772+00:00",
     "draft_mode": false,
     "labels": [
         "*"
